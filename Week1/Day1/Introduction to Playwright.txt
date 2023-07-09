@@ -1,0 +1,35 @@
+Today's Agenda - Week1 Day1
+
+	Playwright  Introduction
+	Chromium Internals
+	Break 
+	Playwright Architecture - An Overview
+	Getting started with Playwright 
+	Classroom & Break
+	Justification of Why Playwright? 
+	Browser Context - A general Outlook
+
+Github repo:
+===========
+Se: https://github.com/SeleniumHQ/selenium
+Official Website: https://www.selenium.dev/
+Playwright: https://github.com/microsoft/playwright
+Playwright-Java: https://github.com/microsoft/playwright-java
+Official Website: https://playwright.dev/java/
+Cypress: https://github.com/cypress-io/cypress
+Puppeteer: https://github.com/puppeteer/puppeteer
+
+If Chrome version is 108
+	then Chromium - 2 versions ahead - 110
+  	Chromium Alpha - 1 vesion  ahead - 109
+
+Playwright Dependency
+
+<!-- https://mvnrepository.com/artifact/com.microsoft.playwright/playwright -->
+<dependency>
+    <groupId>com.microsoft.playwright</groupId>
+    <artifactId>playwright</artifactId>
+    <version>1.35.1</version>
+</dependency>
+
+https://mvnrepository.com/artifact/com.microsoft.playwright/playwright/1.35.1

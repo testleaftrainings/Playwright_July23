@@ -1,0 +1,60 @@
+Agenda  - Week 1 Day 2
+
+    A quick refresher
+    Playwright Internals
+        - .create(), .launch()
+        - Browser
+        - Page
+        - BrowserContext
+        - Maximize
+    Locators
+        - text
+        - css
+        - id
+        - className
+
+TestNG dependency
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>7.7.1</version>
+	</dependency>
+
+Browser Actions
+		// Initialize Playwright
+		Playwright pw = Playwright.create();
+		// Launch the browser
+		/*
+		 * BrowserType browserType = pw.chromium(); Browser browser =
+		 * browserType.launch();
+		 */
+		Browser browser = pw.chromium()
+				.launch((new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false)));
+		// Open a new Page
+		Page page = browser.newPage();
+		// Load the URL
+		page.navigate("http://leaftaps.com/opentaps/control/main");
+
+// Initialize Playwright
+Step:1 Right click on the Interface - Open Declaration
+Step:2 Right Click quick Type Hierarchy - PlaywrightImp
+Step:3 Keep a breakpoint for the process being started and for the connection
+Step:4 Run in the debug mode
+Step:5 Mouse over on the value driver.createProcessBuilder();
+Step:6 Copy the file path and check in your local system for initization of browsers and drivers
+
+Create Lead Testcase:
+1. Initialize Playwright
+2. Launch the browser
+3. Open a new Page
+4. Load the URL
+5. Find the username and enter the value
+6. Find the password and enter the value
+7. Find the login and click
+8. Click CRM/SFA
+9. Click Leads
+10. Click Create Lead
+11. Type Company Name, First Name and Last Name
+12. Click Create Lead
+13. Print the status of the created lead (innerText())
