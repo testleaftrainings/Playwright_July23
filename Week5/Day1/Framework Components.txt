@@ -1,0 +1,63 @@
+Week5 Day1
+
+Playwright Framework - Salesforce
+
+Structure of framework
+
+Framework Components!
+    # Programming Language : Java
+    # UI & Automation Library: Playwright
+    # Test Runner : TestNG
+    # BDD framework: Cucumber
+    # Reporting: Extent Reports
+    # Test Data: Faker - to generate random data / Excel
+    # Threads: Thread Local (Java implementation) which allows you to maintain Thread safety
+      Thread Safety: Thread Local
+    # Build tool: Maven (Java)  
+    # Design Pattern: Pattern Object Model (derivative of Page Object Model), Abstract Factory
+
+Maven Project Structure
+1. src/main
+
+    -/java: All your java code (that likely to go production or dependency to another project)
+    -/resources: Non java code that are likely to support java code
+
+2. src/test
+
+    -/java: All testing codes (project specific)
+    -/resources; Non Java code that are likely to support the test java code
+
+Framework Physical Structure
+
+# src/main/resources
+    app.properties : manage Application Specific Configuration (URL, API endpoints)
+    grid.properties: grid Configuration
+    local.properties: All Configuration to manage testcase
+    report.properties: to manage your reports
+
+# src/main/java
+    1. config: Implementation to read configuration key-value pair [using Owner]
+    2. data: using faker, you can fetch random data for the project
+    3. enum: All your constants (preferrably Master data) for the framework or project
+    4. base
+        DriverFactory: Initialize your browser
+        PlaywrightWrapper: Wrapped methods - They are going to do 3 things:
+                > Exception handling: try/catch 
+                > reporting: Extent Report 
+                > retry logic
+        ProjectHooks: Using TestNG annotations, calling the default framework functions - like browser,
+                        closing Playwright, start/end tracing
+    5. utility 
+        DataLibrary: to read data from Excel 
+        HtmlReporter: Extent Reports to support usability
+        MediaEntityBuilder: Override behaviour of the Extent Reports logic
+        RetryTests: TestNG Listeners implementation for retry logic on failed testcase
+        TempMailer: Create Temp email account / read email with specific subject
+
+#src/test/java
+    pages.base
+        - Base Page class like Login, Dashboard, Home Page,..
+    pages.services
+        - Module specific page repository
+    tests.ui.services
+        - Module specific testcases repo
