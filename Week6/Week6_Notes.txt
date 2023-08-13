@@ -1,0 +1,38 @@
+ # Playwright with API Integration
+
+        > Playwright as an independent API automation tool
+        > Playwright - Create Data (API) + Use them in browser Transaction (UI)
+        > Playwright - Perform UI Transaction - Verify the data using API
+
+    Usecases:
+        1. Web -> Bearer token -> Use the token for auth for API -> Use the token for 
+            next set of API calls
+    
+        2. Web -> Multiple master data (specific to environmnet) - Use API (master) - this will return
+        master data -> Faker
+
+        3. Purchase Order (state based flow applications - API) -> generate valid data -> Next Automation
+
+Week6 Day2
+
+    > Understanding OAuth in Salesforce
+    > Generate OAuth token using Postman & Playwright
+    > Utilise generated OAuth token in Salesforce specific APIs using Postman & Playwright
+    > Build an E2E Test case considering following scenarios
+        # Playwright - Create Data (API) + Use them in browser Transaction (Web)
+        # Playwright - Perform UI Transaction - Verify the data using API
+
+
+Search an existing lead and edit the information (UI)
+
+Pre-req: Create a lead (API)
+POST -> API
+Post: Confirm the edit is done
+GET -> API
+
+How to create an OAuth?
+
+    > Callback URL
+    > Cliient Secret
+    > Client Id 
+    > Grant Type
